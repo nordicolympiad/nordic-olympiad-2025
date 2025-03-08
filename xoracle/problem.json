@@ -1,0 +1,16 @@
+{
+	"name": "xoracle",
+	"code": "xoracle",
+	"title": "Xoracle",
+	"type": "Communication",
+	"time_limit": 1.5,
+	"memory_limit": 1024,
+	"description": "Reconstruct degrees of tree using XOR queries",
+	"cpp_enabled": true,
+	"java_enabled": false,
+	"python_enabled": true,
+	"pascal_enabled": false,
+	"has_manager": true,
+	"has_grader": false,
+	"has_checker": false
+}

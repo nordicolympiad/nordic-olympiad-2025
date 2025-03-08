@@ -1,0 +1,46 @@
+{
+    "global_validators": ["validator.cpp"],
+    "subtasks": {
+        "samples": {
+            "index": 0,
+            "score": 0,
+            "validators": []
+        },
+        "exp(n)": {
+            "index": 1,
+            "score": 9,
+            "validators": ["nq_limit.cpp 10 20"]
+        },
+        "nq": {
+            "index": 2,
+            "score": 10,
+            "validators": ["nq_limit.cpp 2000 4000"]
+        },
+        "low_d": {
+            "index": 3,
+            "score": 6,
+            "validators": ["d_limit.cpp 10"]
+        },
+        "line": {
+            "index": 4,
+            "score": 17,
+            "validators": ["line.cpp"]
+        },
+        "increasing": {
+            "index": 5,
+            "score": 14,
+            "validators": ["increasing.cpp"]
+        },
+        "decreasing": {
+            "index": 6,
+            "score": 26,
+            "validators": ["decreasing.cpp"]
+        },
+        "full": {
+            "index": 7,
+            "score": 18,
+            "validators": [""]
+        }
+
+    }
+}

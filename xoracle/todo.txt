@@ -1,0 +1,26 @@
+To-Do:
+
+**TPS programs**:
+- ~~Validator~~
+- ~~Manager~~
+- Checker (we currently only accept the exact answer given by model solution)
+**Solutions**:
+- ~~Intended solution~~
+- Python solution
+- Subtask 1 solution
+- Subtask 2 solution
+- Subtask 3 solution
+- Subtask 4 solution
+- Subtask 5 solution
+- Randomized solution
+- Non-working solutions
+**Task description**:
+- Markdown/LaTeX file
+- Formatting
+- Decide on comment on disambiguation of ambiguous trees
+Test data:
+- ~~Simple test data generator~~
+- General test data generator
+- Subtask 1 test data generator
+- Subtask 2 test data generator
+- Anti non-seeded random solution

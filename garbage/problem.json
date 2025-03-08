@@ -1,0 +1,16 @@
+{
+    "name": "garbage",
+    "code": "garbage",
+    "title": "Garbage Collection",
+    "type": "Batch",
+    "time_limit": 5.0,
+    "memory_limit": 1024,
+    "description": "Determine the maximum total weight of garbage that can be collected",
+    "cpp_enabled": true,
+	"java_enabled": false,
+	"python_enabled": true,
+	"pascal_enabled": false,
+	"has_manager": false,
+	"has_grader": false,
+	"has_checker": false
+}

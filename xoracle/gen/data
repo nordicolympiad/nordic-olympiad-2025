@@ -1,0 +1,86 @@
+@subtask samples
+manual sample-1.in
+manual sample-2.in
+
+@subtask 1
+manual simple-1.in
+manual sample-2.in
+generator subtask1 1 15 Something
+generator subtask1 1 100 Anything
+generator subtask1 1 537 Everything
+generator subtask1 1 999 TheThing
+generator subtask1 1 1000 ManThing
+
+@subtask 2
+@include 1
+manual deg0.in
+manual deg0_2.in
+manual oob.in
+generator max3 2 121 Hulk
+generator max3 2 987 Hawkeye
+generator subtask2 2 130 CaptainAmerica
+generator subtask2 2 1000 IronMan
+generator subtask2det 2 999 Falcon
+
+@subtask 3
+manual deg0_sub3.in
+manual oob_2_sub3.in
+generator line 3 25 Donde
+generator line 3 291 esta
+generator random_line 3 31 la
+generator random_line 3 292 biblioteca
+generator max3 3 293 Me
+generator degrees 3 293 llamo
+generator star 3 294 T-bone
+generator general 3 50 la
+generator general 3 150 arana
+generator general 3 300 discoteca
+
+@subtask 4
+manual deg0_sub4.in
+manual oob_2_sub4.in
+generator random_line 4 20 Seed
+generator line 4 991 Tree
+generator random_line 4 1000 Leaf
+generator random_line 4 1000 Leaves
+generator max3 4 993 Root
+generator degreesdet 4 1000 Blossom
+generator degrees 4 1000 Blossom
+generator star 4 994 Fruit
+generator general 4 50 Kernel
+generator general 4 567 Plant
+generator general 4 1000 Flower
+
+@subtask 5
+@include samples 1 2
+manual oob_2.in
+generator line 5 954 Once
+generator random_line 5 965 Upon
+generator max3 5 976 A
+generator degrees 5 987 Time
+generator star 5 998 In
+generator general 5 45 A
+generator general 5 498 Kingdom
+generator general 5 1000 Far
+
+@subtask 6
+@include samples 1 2 5
+generator general 6 2000 Asbjoern
+generator general 6 10000 Sebastian
+generator line 6 100000 Elias
+generator random_line 6 100000 Thor
+generator random_line 6 100000 Christian
+generator random_line 6 100000 Maja
+generator max3 6 100000 Markus
+generator max3beg 6 100000 Lind
+generator max3end 6 100000 Maja
+generator max3mid 6 100000 Freja
+generator degrees 6 100000 Anders
+generator degrees 6 100000 William
+generator star 6 100000 David
+generator star_beg 6 100000 Lolck
+generator star_end 6 100000 Vejen
+generator maxor 6 100000 Aabjoern
+generator general 6 100000 Edith
+generator general 6 100000 Bodil
+generator general 6 100000 Nikolaj

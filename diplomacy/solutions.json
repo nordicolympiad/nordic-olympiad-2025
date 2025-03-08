@@ -1,0 +1,78 @@
+{
+    "full_solution.cpp": { "verdict": "model_solution" },
+    "full_solution.py": { "verdict": "correct" },
+    "naive_nq_fast_delete.py": { 
+        "verdict": "time_limit",
+        "except" : {
+            "samples" : "correct",
+            "exp(n)" : "correct",
+            "nq" : "correct",
+            "low_d" : "correct"
+        }
+    },
+    "naive_nq_fast_delete.cpp": { 
+        "verdict": "time_limit",
+        "except" : {
+            "samples" : "correct",
+            "exp(n)" : "correct",
+            "nq" : "correct",
+            "low_d" : "correct"
+        }
+    },
+    "naive_nq_slow_delete.py": { 
+        "verdict": "time_limit",
+        "except" : {
+            "samples" : "correct",
+            "exp(n)" : "correct",
+            "nq"    : "correct"
+        } 
+    },
+    "naive_nq_slow_delete.cpp": { 
+        "verdict": "time_limit",
+        "except" : {
+            "samples" : "correct",
+            "exp(n)" : "correct",
+            "nq"    : "correct"
+        } 
+    },
+    "increasing_priorities_UF_undo.cpp": {
+        "verdict": "incorrect",
+        "except" : {
+            "no_r": "correct",
+            "increasing": "correct"
+        }
+    },
+    "decreasing_priorities_UFQ.cpp": {
+        "verdict": "incorrect",
+        "except" : {
+            "no_r": "correct",
+            "decreasing": "correct"
+        }
+    },
+    "line_st.cpp": {
+        "verdict": "incorrect",
+        "except" : {
+            "line": "correct"
+        }
+    },
+    "line_st.py": {
+        "verdict": "incorrect",
+        "except" : {
+            "line": "correct"
+        }
+    },
+    "slow_naive.py": {
+        "verdict": "incorrect",
+        "except" : {
+            "samples": "correct",
+            "exp(n)": "correct"
+        }
+    },
+    "slow_naive.cpp": {
+        "verdict": "incorrect",
+        "except" : {
+            "samples": "correct",
+            "exp(n)": "correct"
+        }
+    }
+}

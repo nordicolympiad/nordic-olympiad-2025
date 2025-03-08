@@ -1,0 +1,126 @@
+@subtask samples
+manual example-01.in
+manual example-02.in
+
+@subtask exp(n)
+@include samples
+gen_simple_random	6 10 3 3
+gen_simple_random	10 20 5 5
+gen_simple_random	10 20 7 3
+gen_simple_random	10 19 5 5
+gen_simple_random	10 18 5 10
+gen_simple_random	10 20 6 6
+hit_2_components    10 20
+hit_2_components    8 20
+large_changes       10 20
+large_changes       9 20
+add_remove 10 20 4 1 0
+add_remove 10 20 4 1 1
+add_remove 10 20 4 0 0
+add_remove 10 20 4 0 1
+add_remove 10 20 4 -1 0
+add_remove 10 20 4 -1 1
+star 10 20 4 1
+star 10 20 4 0
+star 10 20 4 -1
+
+@subtask nq
+@include exp(n)
+gen_simple_random	2000 4000 1600 200
+gen_simple_random	2000 3999 1200 1000
+gen_simple_random	2000 3998 1300 600
+gen_simple_random	1999 4000 500 2000
+gen_simple_random	30 4000 500 2000
+gen_simple_random	2000 30 10 10
+hit_2_components    2000 4000
+large_changes       2000 4000
+add_remove 2000 4000 500 1 0
+add_remove 2000 4000 500 1 1
+add_remove 2000 4000 500 0 0
+add_remove 2000 4000 500 0 1
+add_remove 2000 4000 500 -1 0
+add_remove 2000 4000 500 -1 1
+star 2000 4000 500 1
+star 2000 4000 500 0
+star 2000 4000 500 -1
+
+@testset lineincreasing
+add_remove 50000 100000 10000 1 1
+
+@testset linedecreasing
+add_remove 50000 100000 10000 -1 1
+
+@subtask low_d
+gen_simple_random	100000 500000 160000 10
+gen_simple_random	100000 500000 180000 10
+gen_simple_random	100000 500000 100000 9
+gen_simple_random	50000 500000 20000 10
+gen_simple_random	100000 500000 5000 10
+gen_simple_random	10 500000 2500 10
+gen_simple_random	100000 30 10 10
+add_remove 100000 200000 10 1 0
+add_remove 100000 200000 10 1 1
+add_remove 100000 200000 10 0 0
+add_remove 100000 200000 10 0 1
+add_remove 100000 200000 10 -1 0
+add_remove 100000 200000 10 -1 1
+star 100000 200000 10 -1
+star 100000 200000 10 0
+star 100000 200000 10 1
+
+@subtask line
+@include lineincreasing
+@include linedecreasing
+gen_simple_line	100000 500000 100000 60000
+gen_simple_line	100000 500000 80000 30000
+gen_simple_line	100000 500000 70000 50000
+gen_simple_line	100000 500000 80000 25000
+gen_simple_line	100000 500000 100000 5000
+gen_simple_line	30 500000 200000 5000
+gen_simple_line	100000 30 10 10
+add_remove 100000 200000 10000 1 1
+add_remove 100000 200000 10000 0 1
+add_remove 100000 200000 10000 -1 1
+
+@subtask increasing
+@include lineincreasing
+gen_simple_random	100000 500000 200000 80000 1
+gen_simple_random	100000 500000 180000 60000 1
+gen_simple_random	100000 500000 170000 70000 1
+gen_simple_random	99900 500000 125000 25000 1
+gen_simple_random	30 500000 125000 25000 1
+gen_simple_random	100000 30 10 10 1
+add_remove 100000 200000 40000 1 0
+star 100000 200000 50000 1
+
+@subtask decreasing
+@include linedecreasing
+gen_simple_random	100000 500000 250000 80000 -1
+gen_simple_random	100000 500000 245000 85000 -1
+gen_simple_random	100000 500000 185000 55000 -1
+gen_simple_random	99900 100000 25000 5000 -1
+gen_simple_random	30 500000 25000 5000 -1
+gen_simple_random	100000 30 10 10 -1
+add_remove 100000 200000 30000 -1 0
+star 100000 200000 50000 -1
+
+@subtask full
+@include nq
+@include low_d
+@include line
+@include increasing
+@include decreasing
+@include lineincreasing
+@include linedecreasing
+gen_simple_random	100000 500000 250000 40000
+gen_simple_random	100000 500000 180000 50000
+gen_simple_random	100000 500000 40000 70000
+gen_simple_random	99900 100000 25000 5000
+hit_2_components    30000 500000
+large_changes       30000 500000
+hit_2_components    40000 500000
+large_changes       40000 500000
+hit_2_components    50000 500000
+large_changes       50000 500000
+add_remove 100000 200000 10 0 0
+star 100000 200000 50000 0

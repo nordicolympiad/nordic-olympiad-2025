@@ -1,0 +1,87 @@
+{
+    "garbage-full_cc.cpp": {
+        "verdict": "model_solution"
+    },
+    "garbage-full_cc.py": {
+        "verdict": "correct"
+    },
+    "garbage-full_st.cpp": {
+        "verdict": "correct"
+    },
+    "garbage-full_st.py": {
+        "verdict": "correct"
+    },
+    "garbage-sub_1.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "cubic": "correct"
+        }
+    },
+    "garbage-sub_1.py": {
+        "verdict": "incorrect",
+        "except": {
+            "cubic": "correct"
+        }
+    },
+    "garbage-sub_2.cpp": {
+        "verdict": "failed",
+        "except": {
+            "small_sea": "correct"
+        }
+    },
+    "garbage-sub_2.py": {
+        "verdict": "failed",
+        "except": {
+            "small_sea": "correct"
+        }
+    },
+    "garbage-sub_3_cc.cpp": {
+        "verdict": "failed",
+        "except": {
+            "cubic": "correct",
+			"small_sea": "correct",
+            "quadratic": "correct"
+        }
+    },
+    "garbage-sub_3_cc.py": {
+        "verdict": "failed",
+        "except": {
+            "cubic": "correct",
+			"small_sea": "correct",
+            "quadratic": "correct"
+        }
+    },
+    "garbage-sub_3_st.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "cubic": "correct",
+            "quadratic": "correct"
+        }
+    },
+    "garbage-sub_3_st.py": {
+        "verdict": "incorrect",
+        "except": {
+            "cubic": "correct",
+            "quadratic": "correct"
+        }
+    },
+    "garbage-sub_4.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "single_dimension": "correct"
+        }
+    },
+    "garbage-sub_4.py": {
+        "verdict": "incorrect",
+        "except": {
+            "single_dimension": "correct"
+        }
+    },
+    "garbage-sub_5.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "small_sea": "correct",
+			"limited_sea": "correct"
+        }
+    }
+}

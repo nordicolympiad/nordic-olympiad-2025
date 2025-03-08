@@ -1,0 +1,92 @@
+@subtask samples
+manual      1.in
+
+@subtask cubic
+@include samples
+generator   GZFCiftUVz  1       xy_uniform  1           w_constant  10          1           1
+generator   DEsAxOJTim  10      xy_uniform  10          w_uniform   10
+generator   SwzlwoMZta  391     xy_uniform  1000000000  w_constant  1
+generator   NispNtPfvj  400     xy_uniform  1000000000  w_uniform   1000000000
+generator   xrHwnDPxym  400     xy_uniform  1000000000  w_uniform   1000000000
+generator   hVwrYJTXSP  400     xy_uniform  1000000000  w_uniform   1000000000
+generator   BkGArHOReu  400     xy_uniform  1000000000  w_extremes  1000000000
+generator   JLlPaXMQtO  400     xy_hotspots 1000000000  3       10       w_uniform  1000000000
+generator   PazlhQqwfh  400     xy_hotspots 1000000000  80      1000000  w_uniform  1000000000
+generator   BLHPsNbVwX  400     xy_hotspots 1000000000  80      1000000  w_extremes 1000000000
+generator   KjkQYMJWAl  400     xy_anti_random  1000000000  2       1000000     1000000     1   w_constant  1000000000   1000000     1000000
+generator   ZGQgOAnzBN  400     xy_anti_random  1000000000  15      1000000     1000000     1   w_constant  1000000000   1000000     1000000
+generator   cdatxcCrmn  400     xy_mix      1000000000  100         100         10      200000000   200000000   0   w_uniform  1000000000   200000000   200000000
+generator   rUtqIMHYvS  400     xy_mix      1000000000  100         100         10      200000000   200000000   0   w_extremes 1000000000   200000000   200000000
+
+@subtask small_sea
+@include samples
+generator   HVDYulnXLN  1       xy_uniform  1           w_constant  10          1           1
+generator   PqPFDetCEv  10      xy_uniform  10          w_uniform   10
+generator   eSmLDYqANZ  10000   xy_uniform  2000        w_constant  1
+generator   BuSOJZGGVA  99991   xy_uniform  2000        w_uniform   1000000000
+generator   IdiAmPlmUR  100000  xy_uniform  2000        w_uniform   1000000000
+generator   TNpIkWjyRz  100000  xy_uniform  2000        w_extremes  1000000000
+generator   fhyeZwTxEP  100000  xy_hotspots 2000        3       10       w_uniform  1000000000
+generator   zoIRmRxbyP  100000  xy_hotspots 2000        80      20       w_extremes 1000000000
+generator   YfIrcIyHSs  100000  xy_anti_random  2000        5       100         100         1   w_constant  1000000000   100         100
+generator   xxYoOxUcHw  100000  xy_anti_random  2000        3       200         100         1   w_constant  1000000000   200         100
+generator   rIDvHrpnef  100000  xy_mix      2000        1000        20          10      600         1           0   w_uniform  1000000000   600         1
+generator   mUGuhGygBN  100000  xy_mix      2000        1000        30          10      1200        1500        0   w_extremes 1000000000   1500        1200
+
+@subtask quadratic
+@include samples cubic
+generator   dPnEKsLUMQ  1991    xy_uniform  1000000000  w_uniform   1000000000
+generator   VRJAWbBpDY  2000    xy_uniform  1000000000  w_uniform   1000000000
+generator   gMnaJeuHtg  2000    xy_uniform  1000000000  w_uniform   1000000000
+generator   RJNLUevDEj  2000    xy_uniform  1000000000  w_extremes  1000000000
+generator   QEPApZhoBk  2000    xy_hotspots 1000000000  3       10       w_uniform  1000000000
+generator   EHJYgVKBeC  2000    xy_hotspots 1000000000  80      1000000  w_uniform  1000000000
+generator   IPGgZlZYbv  2000    xy_hotspots 1000000000  80      1000000  w_extremes 1000000000
+generator   qsiyLRSlUF  2000    xy_anti_random  1000000000  4       1000000     1000000     1   w_constant  1000000000   1000000     1000000
+generator   mjiHvIeghf  2000    xy_anti_random  1000000000  10      1000000     1000000     1   w_constant  1000000000   1000000     1000000
+generator   WRbCPwRCjd  2000    xy_mix      1000000000  100         100         10      200000000   200000000   0   w_uniform  1000000000   200000000   200000000
+generator   tgYrqfuQGo  2000    xy_mix      1000000000  100         100         10      200000000   200000000   0   w_extremes 1000000000   200000000   200000000
+
+@subtask single_dimension
+generator   jAGNHmcapl  1       xy_uniform  1           w_constant  10          1           1000000000
+generator   EcVNOqcPpb  10      xy_uniform  10          w_uniform   10          1000000000
+generator   rFeaSpOYiC  10000   xy_uniform  1000000000  w_constant  1           1000000000
+generator   qZweBYNeJy  99991   xy_uniform  1000000000  w_uniform   1000000000  1000000000
+generator   RvdNxIxDzJ  100000  xy_uniform  1000000000  w_uniform   1000000000  1000000000
+generator   EZQmfsxsgm  100000  xy_uniform  1000000000  w_extremes  1000000000  1000000000
+generator   lAcsWBnDcU  100000  xy_hotspots 1000000000  3       10       w_uniform  1000000000  1000000000
+generator   vQTAODBvdF  100000  xy_hotspots 1000000000  80      1000000  w_extremes 1000000000  1000000000
+generator   UmBPYiMoBB  100000  xy_anti_random  1000000000  2       100000      1000000000  1   w_constant  1000000000   100000      1000000000
+generator   tuoDLGbGDH  100000  xy_anti_random  1000000000  15      100000      1000000000  1   w_constant  1000000000   100000      1000000000
+generator   MIdYuVRBGo  100000  xy_mix      1000000000  100         100         10      20000000    200000000   0   w_uniform  1000000000   200000000   1000000000
+
+@subtask limited_sea
+@include samples small_sea
+generator   flrmFHzbYZ  99991   xy_uniform  100000      w_uniform   1000000000
+generator   EsMYlUcrlK  100000  xy_uniform  100000      w_uniform   1000000000
+generator   XjBQUpeygo  100000  xy_uniform  100000      w_uniform   1000000000
+generator   MXuAgEFbAj  100000  xy_uniform  100000      w_extremes  1000000000
+generator   VeOHnFIStZ  100000  xy_hotspots 100000      3       10      w_uniform  1000000000
+generator   vZJFzCXerk  100000  xy_hotspots 100000      80      500     w_extremes 1000000000
+generator   OuuCNaYWNc  100000  xy_anti_random  100000      2       10000       10000       1   w_constant  1000000000   10000       10000
+generator   CPbfjsstEh  100000  xy_anti_random  100000      3       10000       10000       1   w_constant  1000000000   10000       10000
+generator   POBQqzPdDc  100000  xy_anti_random  100000      5       10000       10000       1   w_constant  1000000000   10000       10000
+generator   MncJJgqRTX  100000  xy_anti_random  100000      5       100         20000       1   w_constant  1000000000   100         20000
+generator   PerIQqAExy  100000  xy_anti_random  100000      15      10000       10000       1   w_constant  123456789    10000       10000
+generator   jyJMOgssdl  100000  xy_mix      100000      100         100         10      20000   20000   0   w_uniform  1000000000   20000   20000
+
+@subtask full
+@include samples cubic small_sea quadratic single_dimension limited_sea
+generator   pjQeiOUSZy  99991   xy_uniform  1000000000  w_uniform   1000000000
+generator   cYXojcFJxQ  100000  xy_uniform  1000000000  w_uniform   1000000000
+generator   hJhiBSvVnR  100000  xy_uniform  1000000000  w_uniform   1000000000  650000000   400000000
+generator   MxDpUyCArM  100000  xy_uniform  1000000000  w_uniform   1000000000  30000   30000
+generator   fjWIQrfeTC  100000  xy_uniform  1000000000  w_extremes  1000000000
+generator   JvuNmsznkQ  100000  xy_hotspots 1000000000  3       10      w_uniform  1000000000
+generator   zcfJzUaZCI  100000  xy_hotspots 1000000000  80      500     w_extremes 1000000000
+generator   DDqAmwgQkT  100000  xy_anti_random  1000000000  3       100000000   100000000   1   w_constant  1000000000   100000000   100000000
+generator   IQrsFzqYjZ  100000  xy_anti_random  1000000000  5       100         20000       0   w_constant  1000000000   100         20000
+generator   gKhHoZjDst  100000  xy_anti_random  1000000000  15      1000000     1000000     1   w_constant  123456789    1000000     1000000
+generator   UZSvrfxbGh  100000  xy_anti_random  1000000000  5       10000000    99999999    1   w_constant  1            10000000    10000000
+generator   xIYgJnjear  100000  xy_anti_random  1000000000  200     15          100000      0   w_constant  111111111    15          100000
+generator   ndOBpOZIoW  100000  xy_mix      1000000000  100         100         10      20000   20000   0   w_uniform  1000000000   20000   20000

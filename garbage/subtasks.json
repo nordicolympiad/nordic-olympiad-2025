@@ -1,0 +1,40 @@
+{
+	"global_validators": ["validator.cpp"],
+	"subtasks": {
+		"samples": {
+			"index": 0,
+			"score": 0,
+			"validators": []
+		},
+		"cubic": {
+			"index": 1,
+			"score": 10,
+			"validators": ["validator-cubic.cpp"]
+		},
+		"small_sea": {
+			"index": 2,
+			"score": 12,
+			"validators": ["validator-small_sea.cpp"]
+		},
+		"quadratic": {
+			"index": 3,
+			"score": 15,
+			"validators": ["validator-quadratic.cpp"]
+		},
+		"single_dimension": {
+			"index": 4,
+			"score": 22,
+			"validators": ["validator-single_dimension.cpp"]
+		},
+		"limited_sea": {
+			"index": 5,
+			"score": 23,
+			"validators": ["validator-limited_sea.cpp"]
+		},
+		"full": {
+			"index": 6,
+			"score": 18,
+			"validators": []
+		}
+	}
+}
