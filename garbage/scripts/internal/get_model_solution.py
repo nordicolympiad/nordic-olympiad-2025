@@ -4,7 +4,7 @@ import os
 from util import load_json
 
 
-SOLUTIONS_JSON = os.environ.get('SOLUTIONS_JSON')
+SOLUTIONS_JSON = "../solutions.json"#os.environ.get('SOLUTIONS_JSON')
 
 
 if __name__ == '__main__':

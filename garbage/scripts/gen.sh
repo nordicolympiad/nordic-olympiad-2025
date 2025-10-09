@@ -2,11 +2,12 @@
 
 set -euo pipefail
 
+INTERNALS=internal
 source "${INTERNALS}/util.sh"
 source "${INTERNALS}/problem_util.sh"
 source "${INTERNALS}/gen_util.sh"
 source "${INTERNALS}/invoke_util.sh"
-
+PYTHON=pypy3
 
 function usage {
 	errcho -ne "\
@@ -65,7 +66,11 @@ Options:
 "
 }
 
-
+VALIDATOR_DIR=../validator
+SOLUTION_DIR=../solution
+LOGS_DIR=../logs
+TESTS_DIR=../data_source
+GEN_DIR=../gen
 model_solution=""
 tests_dir="${TESTS_DIR}"
 gen_data_file="${GEN_DIR}/data"

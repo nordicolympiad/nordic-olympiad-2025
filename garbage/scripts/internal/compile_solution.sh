@@ -23,7 +23,7 @@
 #	* The exit code is non-zero in case of failure.
 #	* It also detects compile warnings if WARN_FILE is defined.
 
-
+INTERNALS=internal
 set -euo pipefail
 
 source "${INTERNALS}/util.sh"
@@ -70,6 +70,7 @@ elif ! is_in "${VERBOSE}" "true" "false" ; then
 	error_exit 1 "Invalid value for variable VERBOSE: ${VERBOSE}"
 fi
 
+HAS_GRADER=false
 check_variable HAS_GRADER
 if "${HAS_GRADER}"; then
 	if variable_not_exists "GRADER_TYPE" ; then
@@ -125,6 +126,8 @@ else
 	vecho "The task does not have grader."
 fi
 
+PROBLEM_NAME=garbage
+SANDBOX=../sandbox
 vecho "Cleaning the sandbox..."
 vrun recreate_dir "${SANDBOX}"
 
@@ -179,13 +182,6 @@ else
 fi
 
 
-# Running pre-compilation hook
-if [ -f "${PRE_COMPILE}" ] ; then
-	vecho "Running pre-compilation hook file ${PRE_COMPILE}..."
-	vrun bash "${PRE_COMPILE}"
-else
-	vecho "Pre-compilation hook file '${PRE_COMPILE}' is not present. Nothing to do before compiling."
-fi
 
 
 if [ "${LANG}" == "cpp" ] ; then
