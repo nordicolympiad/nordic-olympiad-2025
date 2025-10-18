@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class point:
     def __init__(self, x, y, w):
         self.x = x

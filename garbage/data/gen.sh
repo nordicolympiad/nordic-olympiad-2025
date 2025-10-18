@@ -6,6 +6,7 @@
 use_solution garbage-full_cc.cpp
 
 compile generator.cpp opt
+
 samplegroup
 sample 1
 
@@ -28,7 +29,7 @@ tc g1-13 generator   cdatxcCrmn  400     xy_mix      1000000000  100         100
 tc g1-14 generator   rUtqIMHYvS  400     xy_mix      1000000000  100         100         10      200000000   200000000   0   w_extremes 1000000000   200000000   200000000
 
 group g2small_sea 12
-limits maxside=2000 maxcoord=2000
+limits maxcoord=$(( 2000-1 ))
 include_group sample
 tc g2-1 generator   HVDYulnXLN  1       xy_uniform  1           w_constant  10          1           1
 tc g2-2 generator   PqPFDetCEv  10      xy_uniform  10          w_uniform   10
@@ -44,7 +45,8 @@ tc g2-11 generator   rIDvHrpnef  100000  xy_mix      2000        1000        20 
 tc g2-12 generator   mUGuhGygBN  100000  xy_mix      2000        1000        30          10      1200        1500        0   w_extremes 1000000000   1500        1200
 
 group g3quadratic 15
-include_group sample cubic
+limits maxn=2000
+include_group sample g1cubic
 tc g3-1 generator   dPnEKsLUMQ  1991    xy_uniform  1000000000  w_uniform   1000000000
 tc g3-2 generator   VRJAWbBpDY  2000    xy_uniform  1000000000  w_uniform   1000000000
 tc g3-3 generator   gMnaJeuHtg  2000    xy_uniform  1000000000  w_uniform   1000000000
@@ -58,6 +60,7 @@ tc g3-10 generator   WRbCPwRCjd  2000    xy_mix      1000000000  100         100
 tc g3-11 generator   tgYrqfuQGo  2000    xy_mix      1000000000  100         100         10      200000000   200000000   0   w_extremes 1000000000   200000000   200000000
 
 group g4single_dimension 22
+limits hinf=1
 tc g4-1 generator   jAGNHmcapl  1       xy_uniform  1           w_constant  10          1           1000000000
 tc g4-2 generator   EcVNOqcPpb  10      xy_uniform  10          w_uniform   10          1000000000
 tc g4-3 generator   rFeaSpOYiC  10000   xy_uniform  1000000000  w_constant  1           1000000000
@@ -71,7 +74,8 @@ tc g4-10 generator   tuoDLGbGDH  100000  xy_anti_random  1000000000  15      100
 tc g4-11 generator   MIdYuVRBGo  100000  xy_mix      1000000000  100         100         10      20000000    200000000   0   w_uniform  1000000000   200000000   1000000000
 
 group g5limited_sea 23
-include_group sample small_sea
+limits maxcoord=$(( 100000-1 ))
+include_group sample g2small_sea
 tc g5-1 generator   flrmFHzbYZ  99991   xy_uniform  100000      w_uniform   1000000000
 tc g5-2 generator   EsMYlUcrlK  100000  xy_uniform  100000      w_uniform   1000000000
 tc g5-3 generator   XjBQUpeygo  100000  xy_uniform  100000      w_uniform   1000000000
@@ -86,7 +90,7 @@ tc g5-11 generator   PerIQqAExy  100000  xy_anti_random  100000      15      100
 tc g5-12 generator   jyJMOgssdl  100000  xy_mix      100000      100         100         10      20000   20000   0   w_uniform  1000000000   20000   20000
 
 group g6full 18
-include_group sample cubic small_sea quadratic single_dimension limited_sea
+include_group sample g1cubic g2small_sea g3quadratic g4single_dimension g5limited_sea
 tc g6-1 generator   pjQeiOUSZy  99991   xy_uniform  1000000000  w_uniform   1000000000
 tc g6-2 generator   cYXojcFJxQ  100000  xy_uniform  1000000000  w_uniform   1000000000
 tc g6-3 generator   hJhiBSvVnR  100000  xy_uniform  1000000000  w_uniform   1000000000  650000000   400000000
@@ -100,4 +104,3 @@ tc g6-10 generator   gKhHoZjDst  100000  xy_anti_random  1000000000  15      100
 tc g6-11 generator   UZSvrfxbGh  100000  xy_anti_random  1000000000  5       10000000    99999999    1   w_constant  1            10000000    10000000
 tc g6-12 generator   xIYgJnjear  100000  xy_anti_random  1000000000  200     15          100000      0   w_constant  111111111    15          100000
 tc g6-13 generator   ndOBpOZIoW  100000  xy_mix      1000000000  100         100         10      20000   20000   0   w_uniform  1000000000   20000   20000
-

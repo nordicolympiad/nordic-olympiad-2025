@@ -1,10 +1,10 @@
-name: Garbage Collection
+uuid: 5ddbf921-2e90-4c57-a248-8989d82974c2
 author: Sebastian Meineche Falk
 source: Nordic Olympiad in Informatics 2025
 license: cc by-sa
 type: scoring
 
 grading:
-    show_test_data_groups: yes
+    show_test_data_groups: true
 limits:
   time_multiplier: 1.2
