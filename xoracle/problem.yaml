@@ -9,4 +9,4 @@ validation: custom interactive
 grading:
     show_test_data_groups: true
 limits:
-  time_multiplier: 2
+  time_multiplier: 1.3
