@@ -1,3 +1,4 @@
+# MODIFIED: do not auto-append seed
 # This file provides support functions for generating testdata, primarily for
 # scoring problems with test groups. It has some niceties like automatically
 # passing deterministic random seeds to the generator, and generating test
@@ -209,7 +210,7 @@ sample () {
     return 0
   fi
   echo "Solving case sample/$name..."
-  solve "sample/$name"
+  solve "$path"
   CURTEST="$path"
   cases[$name]="$path"
   latestdir[$name]=sample
@@ -306,7 +307,7 @@ _do_tc () {
   # to decimal (range 0-16777215), to make things more deterministic.
   seed=$((16#$(echo -n "$name" | md5sum | head -c 6)))
   echo "Generating case $nicename..."
-  $execmd "${@:5}" $seed > "$path.in"
+  $execmd "${@:5}" > "$path.in"
 
   echo "Solving case $nicename..."
   solve "$path"
@@ -426,18 +427,47 @@ tc_manual () {
   tc $(_base "$1") cat "$1"
 }
 
+# Arguments: ../manual-tests/test_group/
+tg_manual() {
+  local dir="$1"
+
+  if [[ ! -d "$dir" ]]; then
+    _error "Directory \"$dir\" does not exist."
+    return 0
+  fi
+
+  local invalid
+  invalid=$(find "$dir" -mindepth 1 -maxdepth 1 -type f ! -name "*.in" -print -quit)
+  if [[ -n "$invalid" ]]; then
+    _error "File \"$invalid\" in \"$dir\" is not a \".in\" file."
+    return 0
+  fi
+
+  local infiles=("$dir"/*.in)
+  if [[ ! -e "${infiles[0]}" ]]; then
+    _error "No .in files found in \"$dir\"."
+    return 0
+  fi
+
+  for infile in "${infiles[@]}"; do
+    tc_manual "$infile"
+  done
+}
+
 # Include all testcases in another group
 # Arguments: group name to include
 include_group () {
   _assert_scoring include_group
-  local any=0
-  for x in ${groups[$1]}; do
-    tc "$x"
-    any=1
+  for g in "$@"; do
+    local any=0
+    for x in ${groups[$g]}; do
+      tc "$x"
+      any=1
+    done
+    if [[ $any = 0 ]]; then
+      _error "included group \"$g\" does not exist"
+    fi
   done
-  if [[ $any = 0 ]]; then
-    _error "included group \"$1\" does not exist"
-  fi
 }
 
 # Initialization and cleanup code, automatically included.
