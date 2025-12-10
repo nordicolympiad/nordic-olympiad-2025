@@ -38,8 +38,8 @@ where $1 \leq i, j \leq N$.
 The judge will then respond by writing a single number, $x$, on a line, where $x = \deg(i) \oplus \deg(j)$.
 Here $\deg(x)$ is the degree of the node $x$, and $\oplus$ is defined as the bitwise XOR.
 
-The bitwise XOR product of two integers $a$ and $b$ is calculated by looking at the binary representations of $a$ and $b$.
-The $i$'th bit of the product is $1$, if and only if either the $i$'th bit of $a$ or $b$ is $1$, but not both.
+The bitwise XOR of two integers $a$ and $b$ is calculated by looking at the binary representations of $a$ and $b$.
+The $i$'th bit of the result is $1$, if and only if either the $i$'th bit of $a$ or $b$ is $1$, but not both.
 It is available as an operator in both C++ and Python as \texttt{\^{}}.
 
 After your queries, your program must output the degrees of all nodes.
@@ -62,6 +62,7 @@ This can be done in one of the following ways:
 
 \begin{itemize}
   \item $2 \leq N \leq 10^5$.
+  \item The tree is constructed so that, regardless of which queries are asked, there is exactly one degree sequence consistent with the answers.
 \end{itemize}
 
 \subsection*{Subtasks}

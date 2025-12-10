@@ -22,7 +22,6 @@ struct UF {
 };
 
 void run() {
-    // TODO: special1 and 2
     Int(1, 6); // test group
     Endl();
     bool special1 = Arg("special1", false);
