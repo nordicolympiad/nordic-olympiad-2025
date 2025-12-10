@@ -1,10 +1,13 @@
-name: Diplomacy
+uuid: c655713c-a2cb-4636-9f7b-c2469251534b
 author: David Rasmussen Lolck
 source: Nordic Olympiad in Informatics 2025
 license: cc by-sa
 type: scoring
 
+#validation: custom interactive
+
 grading:
-    show_test_data_groups: yes
+    show_test_data_groups: true
 limits:
   time_multiplier: 2.5
+  memory: 2048

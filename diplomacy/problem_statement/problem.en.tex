@@ -1,0 +1,133 @@
+\problemname{Dodgeball Diplomacy}
+
+A region consists of $N$ cities, numbered from $1$ to $N$. These cities may establish treaties, which indicate their willingness to collaborate with each other.
+
+An \emph{alliance} is a group of cities where each city is connected to every other city in the group through one or more treaties. The size of an alliance is the number of cities that belong to that alliance.
+
+Each treaty has a length, representing the number of pages used to draft it. To reduce bureaucracy, cities will occasionally remove the longest active treaty (i.e., the one with the highest page count).
+
+Beyond administrative matters, the cities also engage in dodgeball rounds between alliances.
+A dodgeball round follows the following rules:
+\begin{itemize}
+    \item Each alliance forms a team.
+    \item Alliances are paired up to play against each other.
+    \item If the number of alliances is odd, one team will play against an empty alliance of size $0$.
+    \item The unfairness score of a match between two alliances of sizes $A$ and $B$ is $|A-B|$.
+    \item The total unfairness score for a round is the sum of unfairness scores across all matches.
+\end{itemize}
+
+You must determine the minimum possible total unfairness score by optimally pairing the alliances.
+
+\subsection*{Queries}
+
+You must support $Q$ queries of the following types:
+
+\begin{itemize}
+    \item \texttt{a}: Add a treaty between cities $u$ and $v$ with $p$ pages.
+    \item \texttt{r}: Remove the longest treaty (the one with the highest page count). All page counts are unique.
+    \item \texttt{d}: Compute the minimum unfairness score for a dodgeball round based on the current alliances.
+\end{itemize}
+
+Queries of type \texttt{d} \textbf{must be answered immediately} upon request, before processing any further queries.
+
+\subsection*{Input}
+
+The program should read:
+\begin{itemize}
+    \item Line 1: $N\;Q$
+    \item Next $Q$ lines: one of
+    \begin{itemize}
+        \item \texttt{a} $u\;v\;p$
+        \item \texttt{r}
+        \item \texttt{d}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Output}
+
+For each query of type \texttt{d}, the program should immediately output the corresponding answer before processing further queries.  
+You must also flush the output immediately, e.g.:
+\begin{itemize}
+    \item C++: \texttt{std::cout << std::endl;}
+    \item Python: \texttt{print("", flush=True)}
+\end{itemize}
+
+\subsection*{Constraints}
+
+\begin{itemize}
+    \item $1 \leq N \leq 100000$
+    \item $1 \leq Q \leq 500000$
+    \item $1 \leq p \leq 10^9$
+    \item $1 \leq u, v \leq N$
+    \item $u \neq v$ for each \texttt{a} query
+    \item No duplicate active treaty between $u$ and $v$
+    \item All page counts $p$ are unique
+\end{itemize}
+
+\subsection*{Subtasks}
+
+\begin{enumerate}
+    \item (9 points) $N \le 10,\; Q \le 20$
+    \item (10 points) $N \le 2000,\; Q \le 4000$
+    \item (6 points) At most 10 \texttt{d} queries
+    \item (17 points) For each \texttt{a} query, $u+1 = v$
+    \item (14 points) Treaties are created in increasing page count order
+    \item (26 points) Treaties are created in decreasing page count order
+    \item (18 points) No additional constraints
+\end{enumerate}
+
+\subsection*{Example 1}
+
+\textbf{Input:}
+\begin{verbatim}
+3 5
+a 1 2 1
+a 2 3 2
+d
+r
+d
+\end{verbatim}
+
+\textbf{Output:}
+\begin{verbatim}
+3
+1
+\end{verbatim}
+
+\textbf{Explanation:}
+
+When the first dodgeball tournament is played, cities $1$, $2$, and $3$ are all in one alliance of size $3$, so they play against an empty alliance of size $0$, giving $|3-0| = 3$.
+
+Then the treaty between cities $2$ and $3$ is removed. The alliances become $\{1,2\}$ and $\{3\}$, giving an unfairness score of $|2-1| = 1$.
+
+\subsection*{Example 2}
+
+\textbf{Input:}
+\begin{verbatim}
+6 10
+a 2 3 10
+a 1 2 5
+a 3 4 8
+d
+r
+d
+a 4 5 1
+a 3 6 7
+r
+d
+\end{verbatim}
+
+\textbf{Output:}
+\begin{verbatim}
+4
+0
+2
+\end{verbatim}
+
+\textbf{Explanation:}
+
+In the first round, alliances have sizes $4$, $1$, and $1$, giving total unfairness $4$.
+
+In the second round, alliances have sizes $2$, $2$, $1$, and $1$, giving total unfairness $0$.
+
+In the third round, there are three alliances of size $2$, giving total unfairness $2$.
