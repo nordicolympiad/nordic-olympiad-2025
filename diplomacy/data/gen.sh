@@ -17,6 +17,7 @@ sample example-01
 sample example-02
 
 group g1expn 9
+limits maxn=10 maxq=20
 include_group sample
 tc g1-1 gen_simple_random	6 10 3 3
 tc g1-2 gen_simple_random	10 20 5 5
@@ -39,6 +40,7 @@ tc g1-18 star 10 20 4 0
 tc g1-19 star 10 20 4 -1
 
 group g2nq 10
+limits maxn=2000 maxq=4000
 include_group g1expn
 tc g2-1 gen_simple_random	2000 4000 1600 200
 tc g2-2 gen_simple_random	2000 3999 1200 1000
@@ -59,6 +61,8 @@ tc g2-16 star 2000 4000 500 0
 tc g2-17 star 2000 4000 500 -1
 
 group g3low_d 6
+limits maxd=10
+include_group sample
 tc g3-1 gen_simple_random	100000 500000 160000 10
 tc g3-2 gen_simple_random	100000 500000 180000 10
 tc g3-3 gen_simple_random	100000 500000 100000 9
@@ -77,6 +81,7 @@ tc g3-15 star 100000 200000 10 0
 tc g3-16 star 100000 200000 10 1
 
 group g4line 17
+limits line=1
 tc g4-1 add_remove 50000 100000 10000 1 1
 tc g4-2 add_remove 50000 100000 10000 -1 1
 tc g4-3 gen_simple_line	100000 500000 100000 60000
@@ -91,6 +96,7 @@ tc g4-11 add_remove 100000 200000 10000 0 1
 tc g4-12 add_remove 100000 200000 10000 -1 1
 
 group g5increasing 14
+limits increasing_p=1
 tc g5-1 add_remove 50000 100000 10000 1 1
 tc g5-2 gen_simple_random	100000 500000 200000 80000 1
 tc g5-3 gen_simple_random	100000 500000 180000 60000 1
@@ -102,6 +108,7 @@ tc g5-8 add_remove 100000 200000 40000 1 0
 tc g5-9 star 100000 200000 50000 1
 
 group g6decreasing 26
+limits decreasing_p=1
 tc g6-1 add_remove 50000 100000 10000 -1 1
 tc g6-2 gen_simple_random	100000 500000 250000 80000 -1
 tc g6-3 gen_simple_random	100000 500000 245000 85000 -1
