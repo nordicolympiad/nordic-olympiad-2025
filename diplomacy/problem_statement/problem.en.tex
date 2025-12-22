@@ -76,55 +76,13 @@ You must also flush the output immediately, e.g.:
     \item (18 points) No additional constraints
 \end{enumerate}
 
-\subsection*{Example 1}
-
-\textbf{Input:}
-\begin{verbatim}
-3 5
-a 1 2 1
-a 2 3 2
-d
-r
-d
-\end{verbatim}
-
-\textbf{Output:}
-\begin{verbatim}
-3
-1
-\end{verbatim}
-
-\textbf{Explanation:}
+\subsection*{Explanation of Sample 1}
 
 When the first dodgeball tournament is played, cities $1$, $2$, and $3$ are all in one alliance of size $3$, so they play against an empty alliance of size $0$, giving $|3-0| = 3$.
 
 Then the treaty between cities $2$ and $3$ is removed. The alliances become $\{1,2\}$ and $\{3\}$, giving an unfairness score of $|2-1| = 1$.
 
-\subsection*{Example 2}
-
-\textbf{Input:}
-\begin{verbatim}
-6 10
-a 2 3 10
-a 1 2 5
-a 3 4 8
-d
-r
-d
-a 4 5 1
-a 3 6 7
-r
-d
-\end{verbatim}
-
-\textbf{Output:}
-\begin{verbatim}
-4
-0
-2
-\end{verbatim}
-
-\textbf{Explanation:}
+\subsection*{Explanation of Sample 2}
 
 In the first round, alliances have sizes $4$, $1$, and $1$, giving total unfairness $4$.
 

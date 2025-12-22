@@ -4,10 +4,10 @@ source: Nordic Olympiad in Informatics 2025
 license: cc by-sa
 type: scoring
 
-#validation: custom interactive
+validation: custom interactive
 
 grading:
     show_test_data_groups: true
 limits:
-  time_multiplier: 2.5
+  time_multiplier: 1.2
   memory: 2048

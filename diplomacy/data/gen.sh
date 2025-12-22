@@ -13,8 +13,8 @@ compile star.cpp opt
 compile gen_simple_random.cpp opt
 
 samplegroup
-sample example-01
-sample example-02
+sample 1
+sample 2
 
 group g1expn 9
 limits maxn=10 maxq=20
