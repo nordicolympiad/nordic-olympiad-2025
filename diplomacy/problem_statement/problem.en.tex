@@ -18,7 +18,7 @@ A dodgeball round follows the following rules:
 
 You must determine the minimum possible total unfairness score by optimally pairing the alliances.
 
-\subsection*{Queries}
+\section*{Queries}
 
 You must support $Q$ queries of the following types:
 
@@ -30,7 +30,7 @@ You must support $Q$ queries of the following types:
 
 Queries of type \texttt{d} \textbf{must be answered immediately} upon request, before processing any further queries.
 
-\subsection*{Input}
+\section*{Input}
 
 The program should read:
 \begin{itemize}
@@ -43,7 +43,7 @@ The program should read:
     \end{itemize}
 \end{itemize}
 
-\subsection*{Output}
+\section*{Output}
 
 For each query of type \texttt{d}, the program should immediately output the corresponding answer before processing further queries.  
 You must also flush the output immediately, e.g.:
@@ -52,7 +52,7 @@ You must also flush the output immediately, e.g.:
     \item Python: \texttt{print("", flush=True)}
 \end{itemize}
 
-\subsection*{Constraints}
+\section*{Constraints}
 
 \begin{itemize}
     \item $1 \leq N \leq 100000$
@@ -64,7 +64,7 @@ You must also flush the output immediately, e.g.:
     \item All page counts $p$ are unique
 \end{itemize}
 
-\subsection*{Subtasks}
+\section*{Subtasks}
 
 \begin{enumerate}
     \item (9 points) $N \le 10,\; Q \le 20$
@@ -76,13 +76,13 @@ You must also flush the output immediately, e.g.:
     \item (18 points) No additional constraints
 \end{enumerate}
 
-\subsection*{Explanation of Sample 1}
+\section*{Explanation of Sample 1}
 
 When the first dodgeball tournament is played, cities $1$, $2$, and $3$ are all in one alliance of size $3$, so they play against an empty alliance of size $0$, giving $|3-0| = 3$.
 
 Then the treaty between cities $2$ and $3$ is removed. The alliances become $\{1,2\}$ and $\{3\}$, giving an unfairness score of $|2-1| = 1$.
 
-\subsection*{Explanation of Sample 2}
+\section*{Explanation of Sample 2}
 
 In the first round, alliances have sizes $4$, $1$, and $1$, giving total unfairness $4$.
 
