@@ -29,7 +29,7 @@ tc g1-13 generator   cdatxcCrmn  400     xy_mix      1000000000  100         100
 tc g1-14 generator   rUtqIMHYvS  400     xy_mix      1000000000  100         100         10      200000000   200000000   0   w_extremes 1000000000   200000000   200000000
 
 group g2small_sea 12
-limits maxcoord=$(( 2000-1 ))
+limits maxcoord=2000
 include_group sample
 tc g2-1 generator   HVDYulnXLN  1       xy_uniform  1           w_constant  10          1           1
 tc g2-2 generator   PqPFDetCEv  10      xy_uniform  10          w_uniform   10
@@ -74,7 +74,7 @@ tc g4-10 generator   tuoDLGbGDH  100000  xy_anti_random  1000000000  15      100
 tc g4-11 generator   MIdYuVRBGo  100000  xy_mix      1000000000  100         100         10      20000000    200000000   0   w_uniform  1000000000   200000000   1000000000
 
 group g5limited_sea 23
-limits maxcoord=$(( 100000-1 ))
+limits maxcoord=100000
 include_group sample g2small_sea
 tc g5-1 generator   flrmFHzbYZ  99991   xy_uniform  100000      w_uniform   1000000000
 tc g5-2 generator   EsMYlUcrlK  100000  xy_uniform  100000      w_uniform   1000000000
